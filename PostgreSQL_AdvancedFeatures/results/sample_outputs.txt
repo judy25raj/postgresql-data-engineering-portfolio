@@ -1,0 +1,27 @@
+=== keyvalue Trigger Test (Conceptual) ===
+
+INSERT INTO keyvalue(key, value) VALUES ('alpha', 'one');
+-- created_at = 2025-.., updated_at = 2025-..
+
+UPDATE keyvalue SET value = 'two' WHERE key = 'alpha';
+-- updated_at changes to current timestamp
+
+=== bigtext Count Check ===
+
+SELECT COUNT(*) FROM bigtext;
+-- 100000
+
+=== Regex Test (Conceptual) ===
+
+SELECT purpose
+FROM taxdata
+WHERE purpose ~ '^[A-Z][a-z]'
+ORDER BY purpose DESC
+LIMIT 3;
+-- Returns lines starting with Uppercase + lowercase, e.g. "Zumas...", "Zulu...", etc.
+
+=== Hash Collision Pair ===
+
+String 1: AAC
+String 2: ADA
+Both → hash value 396 (with given Python hash).

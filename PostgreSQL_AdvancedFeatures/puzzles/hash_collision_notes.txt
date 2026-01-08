@@ -1,0 +1,20 @@
+Hash Collision Puzzle – Custom Hash Function
+
+Python hash code:
+
+    hv = 0
+    pos = 0
+    for let in txt:
+        pos = (pos % 4) + 1
+        hv = (hv + (pos * ord(let))) % 1000000
+
+Collision requirement:
+    Two different strings produce the same final 'hv'.
+
+Verified collision pair:
+
+    String 1: AAC
+    String 2: ADA
+    Hash: 396
+
+Both strings produce the same hash value = 396 with the given code.
