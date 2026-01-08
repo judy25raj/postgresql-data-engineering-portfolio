@@ -1,0 +1,18 @@
+
+=== Sample Query Results ===
+
+automagic:
+Alice | 165.5
+Bob   | 172.3
+
+ages:
+Eduards | 31
+Hala    | 36
+Maggi   | 32
+Miya    | 31
+Oban    | 33
+
+track_raw (first 3 rows):
+A Boy Named Sue (live) | The Legend Of Johnny Cash
+A Brief History of Packets | Computing Conversations
+Aguas De Marco | Natural Wonders Music Sampler 1999
