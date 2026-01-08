@@ -1,0 +1,17 @@
+
+=== AUTOMOBILES EXPECTED OUTPUT ===
+Lexus | NX 200t AWD
+Lexus | NX 200t AWD F Sport
+Lexus | NX 300
+Suzuki | Forsa Turbo
+Suzuki | Grand Vitara
+
+=== TRACKS EXPECTED OUTPUT ===
+A Boy Named Sue (live) | The Legend Of Johnny Cash
+A Brief History of Packets | Computing Conversations
+Aguas De Marco | Natural Wonders Music Sampler 1999
+
+=== UNESCO EXPECTED OUTPUT ===
+Cultural Landscape...Bamiyan Valley | 2003 | Cultural | Afghanistan | Asia & Pacific | af
+Minaret of Jam | 2002 | Cultural | Afghanistan | Asia & Pacific | af
+Butrint | 1992 | Cultural | Albania | Europe & North America | al
