@@ -1,0 +1,25 @@
+Sample conceptual outputs (for documentation; autograder uses its own tools).
+
+=== Book Load ===
+- Index: pg4e_6b74d49971
+- Documents indexed: many paragraph chunks from pg18866.txt
+- Example elastictool-style search:
+
+Command:
+    search eccentric
+
+Expected:
+    At least one hit where _source.content contains 'eccentric'.
+
+=== Email Load ===
+- Index cleared and reloaded with at least 100 email documents from sakai.devel mbox.
+- Fields: type=email, from, to, subject, date, body
+
+=== Tweets Load ===
+Indexed tweets like:
+
+- "This is looking much better so you try to communicate some more"
+- "You must be the legendary god that comes from the sky"
+- "We have been waiting for you for a long time"
+- "Our legend says you will be very tasty with mustard"
+- "print We will have a feast tonight unless you say"
