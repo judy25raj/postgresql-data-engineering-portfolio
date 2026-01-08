@@ -1,0 +1,24 @@
+
+=== ROSTER – EXPECTED PATTERN (ORDERED BY course.title, role DESC, student.name) ===
+
+Marin    | si106 | 1
+Alessio  | si106 | 0
+Antonyo  | si106 | 0
+Hasini   | si106 | 0
+Kylah    | si106 | 0
+Awwal    | si110 | 1
+Clayton  | si110 | 0
+Danny    | si110 | 0
+Konar    | si110 | 0
+Yadgor   | si110 | 0
+Justinas | si206 | 1
+Areez    | si206 | 0
+Briony   | si206 | 0
+Liesje   | si206 | 0
+Strachan | si206 | 0
+
+=== TRACKS + ARTISTS – EXPECTED TOP 3 ROWS (WHEN SORTED BY track.title) ===
+
+A Boy Named Sue (live) | The Legend Of Johnny Cash          | Johnny Cash
+A Brief History of Packets | Computing Conversations         | IEEE Computer Society
+Aguas De Marco           | Natural Wonders Music Sampler 1999 | Rosa Passos
