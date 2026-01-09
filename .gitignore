@@ -1,0 +1,16 @@
+# PostgreSQL
+*.sql~
+*.dump
+*.log
+
+# Data
+data/
+*.csv
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
