@@ -7,23 +7,43 @@
 <hr/>
 
 ## 🧠 Overview
-This project demonstrates how to ingest semi-structured data from a public REST API into PostgreSQL using the **JSONB** data type.
+This project demonstrates ingestion of semi-structured data from a public REST API into PostgreSQL using the JSONB data type.
 
-A Python-based ingestion pipeline fetches records from the PokéAPI and stores them as JSON documents, enabling flexible querying and analytics on nested data structures.
+A Python pipeline fetches records from PokéAPI and stores them as JSON documents, enabling analytics on nested data.
 
 ## 🎯 Capabilities Demonstrated
-- REST API consumption using Python  
-- Automated ingestion of JSON into PostgreSQL  
-- Storage and querying with JSONB  
-- Parameterized SQL and secure connection handling  
+- REST API consumption  
+- Automated JSON ingestion  
+- JSONB storage and querying  
+- Parameterized SQL  
 
 ## 🛠 Environment
-The project can be executed against:
-
-- A local PostgreSQL instance (recommended)  
-- A course-hosted PostgreSQL database  
-
-**Local example:**
 ```bash
 createdb pokeapi_db
 psql pokeapi_db
+```
+
+## 📂 Project Structure
+```
+postgresql-json-api-ingestion/
+├── README.md
+├── docs/
+├── sql/
+│   └── 01_create_pokeapi_table.sql
+├── src/
+│   └── fetch_pokeapi.py
+└── results/
+```
+
+## ▶ How to Run
+```sql
+\i sql/01_create_pokeapi_table.sql
+```
+
+```bash
+pip install requests psycopg2-binary python-dotenv
+python src/fetch_pokeapi.py
+```
+
+## 🧠 Data Engineering Value
+Enables hybrid analytics on semi-structured data inside relational systems.
