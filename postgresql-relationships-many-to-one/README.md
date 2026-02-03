@@ -1,27 +1,49 @@
+<h1 align="center">PostgreSQL Relationships – Many-to-One Normalization</h1>
 
-# PostgreSQL Project 2: Many-to-One Normalization (Professional Portfolio Project)
+<p align="center">
+  Relational Modeling • Normalization • ETL • Referential Integrity
+</p>
 
-This project contains **three full normalization tasks**:
-1. Automobiles (make → model)
-2. Musical Tracks (album → track)
-3. UNESCO Heritage Sites (category/state/region/iso → unesco)
+<hr/>
 
-Each module includes:
-- SQL schema creation
-- ETL steps
-- Data normalization
-- Execution results
-- Professional documentation
+## 🧠 Overview
+This project demonstrates how to design and normalize many-to-one relationships in PostgreSQL using real-world datasets.
 
-This portfolio project demonstrates:
-✔ Relational modeling  
-✔ Many-to-one normalization  
-✔ ETL workflows  
-✔ Foreign keys & constraints  
-✔ CSV ingestion with COPY  
-✔ SQL analytics  
+It covers three independent normalization scenarios, each transforming denormalized data into clean, relational schemas with foreign keys, constraints, and analytics-ready structures.
 
-Run everything using:
+## 🎯 Capabilities Demonstrated
+- Many-to-one relational schema design  
+- Data normalization from flat/denormalized sources  
+- Foreign key constraints & referential integrity  
+- SQL-only ETL pipelines  
+- Validation and reporting queries  
+
+## 🗂️ Normalization Scenarios
+
+| Domain | Relationship |
+|--------|-------------|
+| Automobiles | Make → Model |
+| Music Library | Album → Track |
+| UNESCO Sites | Category/State/Region/ISO → Site |
+
+## 📂 Project Structure
 ```
+postgresql-relationships-many-to-one/
+├── README.md
+├── docs/
+├── sql/
+├── results/
+```
+
+## ▶ How to Run
+```bash
 psql -h pg.pg4e.com -p 5432 -U <user> <database>
 ```
+
+Run scripts in sql/ in order.
+
+## 🧠 Data Engineering Value
+- Enforces data consistency  
+- Reduces duplication  
+- Improves query performance  
+- Supports scalable analytics
