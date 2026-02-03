@@ -7,17 +7,39 @@
 <hr/>
 
 ## 🧠 Overview
-This project demonstrates how to design and implement **many-to-many relationships** in PostgreSQL using normalized schemas and junction tables.
+This project demonstrates how to design and implement many-to-many relationships using normalized schemas and junction tables.
 
-Two real-world modeling scenarios are implemented:
-
-- **Course Roster** — students enrolled in multiple courses with roles  
-- **Music Library** — tracks associated with multiple artists  
-
-The project showcases best practices for relational modeling, data normalization, and SQL-based transformation workflows.
+Scenarios:
+- Course roster with roles  
+- Music tracks with multiple artists  
 
 ## 🎯 Capabilities Demonstrated
-- Many-to-many schema design using junction tables  
-- Foreign key constraints with referential integrity  
-- Data normalization from denormalized text columns  
-- S
+- Junction tables  
+- Referential integrity  
+- SQL-only ETL  
+
+## 🛠 Environment
+```bash
+createdb m2m_db
+psql m2m_db
+```
+
+## 📂 Project Structure
+```
+postgresql-relationships-many-to-many/
+├── README.md
+├── docs/
+├── sql/
+│   ├── roster_many_to_many.sql
+│   └── tracks_artists_many_to_many.sql
+└── results/
+```
+
+## ▶ How to Run
+```sql
+\i sql/roster_many_to_many.sql
+\i sql/tracks_artists_many_to_many.sql
+```
+
+## 🧠 Data Engineering Value
+Ensures scalable analytics with normalized relational design.
