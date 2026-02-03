@@ -1,35 +1,27 @@
-# Project 7: Elasticsearch Book, Email & Tweet Indexing (Professional Portfolio Project)
+<h1 align="center">Search Engineering with Elasticsearch</h1>
 
-This project demonstrates integrating **Python** with **Elasticsearch** for text indexing and search,
-based on three classic PG4E assignments:
+<p align="center">
+  Book • Email • Tweet Indexing • Python • Search Analytics
+</p>
 
-1. **Book Load (elasticbook)** – Load a Gutenberg book from a URL into Elasticsearch.
-2. **Email Load (elasticmail)** – Load at least the first 100 messages from an mbox feed.
-3. **Tweet Load (elastictweet)** – Index a set of short text messages ("tweets").
+<hr/>
 
-All three use:
+## 🧠 Overview
+This project demonstrates building a full text search ingestion pipeline using Python and Elasticsearch.  
+It indexes three different data sources—long-form books, email archives, and short text messages—into a single searchable index.
 
-- A shared `hidden.py` configuration
-- The `elasticsearch<7.14.0` Python client
-- A single index named after the user: `YOUR_ELASTIC_USER`
-- Clean re-runs by **deleting the index before loading**
+The solution reflects real-world search engineering patterns: ingestion, indexing, validation, and lifecycle management.
 
-This repository is structured as a **professional, GitHub-ready Elasticsearch portfolio project**.
+## 🎯 Capabilities Demonstrated
+- Python integration with Elasticsearch
+- Index lifecycle management (delete, create, re-index)
+- Ingesting external data (HTTP, mbox, flat text)
+- Query validation using full-text search
+- Secure configuration via environment abstraction
 
----
-
-## 🔧 Environment & Dependencies
-
-Install the Elasticsearch Python client:
-
-```bash
-python -m pip install 'elasticsearch<7.14.0'
+## 📂 Project Structure
 ```
-
-Project layout:
-
-```text
-PostgreSQL_Project_7_Elasticsearch_Portfolio/
+elasticsearch-data-ingestion-search/
 ├── README.md
 ├── docs/
 │   ├── overview.md
@@ -41,22 +33,26 @@ PostgreSQL_Project_7_Elasticsearch_Portfolio/
 │   ├── elastic_book_load.py
 │   ├── elastic_email_load.py
 │   └── elastic_tweets_load.py
-└── results/
-    └── sample_outputs.txt
+├── results/
+│   └── sample_outputs.txt
+├── requirements.txt
+└── SECURITY.md
 ```
 
----
+## 🛠 Environment
+```bash
+pip install 'elasticsearch<7.14.0'
+```
 
-## ⚙️ Setup `hidden.py`
-
-Copy the template:
+## ⚙️ Configuration
+Create config file:
 
 ```bash
-cd PostgreSQL_Project_7_Elasticsearch_Portfolio/src
+cd src
 cp hidden_template.py hidden.py
 ```
 
-Edit `hidden.py` and fill in your real values:
+Edit hidden.py:
 
 ```python
 def elastic():
@@ -66,41 +62,18 @@ def elastic():
         "port": 443,
         "scheme": "https",
         "user": "YOUR_ELASTIC_USER",
-        "pass": "YOUR_ELASTIC_PASSWORD_HERE",
+        "pass": "YOUR_ELASTIC_PASSWORD",
     }
 ```
 
----
-
-## ▶ How To Run Each Loader
-
-From the `src/` folder:
-
+## ▶ How to Run
 ```bash
-python elastic_book_load.py        # Project: Elasticsearch Book Load
-python elastic_email_load.py       # Project: Elasticsearch Email Load
-python elastic_tweets_load.py      # Project: Elasticsearch Tweets
+python elastic_book_load.py
+python elastic_email_load.py
+python elastic_tweets_load.py
 ```
 
-Each script:
-
-- Uses `hidden.elastic()` to build the Elasticsearch client
-- Deletes the index returned by `elastic()['user']` before loading
-- Indexes data into that index
-- Prints summary and sample search checks
-
----
-
-## ✅ Skills Demonstrated
-
-- Using the official `elasticsearch` Python client
-- Index lifecycle: delete / create / index / search
-- Indexing long-form text (book), semi-structured content (emails), and short-form text (tweets)
-- Handling external data sources: HTTP text, mbox feed
-- Using query_string queries to validate indexing (like `elastictool.py`)
-
-You can describe this as:
-
-> **“Search Engineering with Elasticsearch: Book, Email, and Tweet Indexing in Python”**
-
-in your resume or portfolio.
+## 🧠 Data Engineering Value
+- Demonstrates hybrid search pipelines  
+- Supports structured + unstructured analytics  
+- Shows scalable ingestion & indexing design  
