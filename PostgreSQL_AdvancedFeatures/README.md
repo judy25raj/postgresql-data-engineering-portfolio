@@ -7,23 +7,21 @@
 <hr/>
 
 ## 🧠 Overview
-This project demonstrates advanced PostgreSQL capabilities through a series of practical data and logic exercises, including trigger-based auditing, large-scale text processing, bulk data generation, and a conceptual hash collision puzzle.
-
-The implementation showcases how PostgreSQL can be extended beyond basic queries to support data integrity, automation, analytics, and security-oriented thinking.
+This project demonstrates advanced PostgreSQL capabilities through practical exercises: trigger-based auditing, large-scale text processing, bulk data generation, and a conceptual hash collision puzzle.
 
 ## 🎯 Capabilities Demonstrated
-- Audit-style triggers to automatically update metadata  
+- Audit-style triggers to update metadata  
 - Regular expression filtering on large text datasets  
-- Bulk synthetic data generation using PL/pgSQL loops  
-- Conceptual hash collision analysis for security awareness  
+- Bulk synthetic data generation using PL/pgSQL  
+- Conceptual hash collision analysis  
 
-## 🛠 Environment
-The project can be executed on:
+## 📂 Project Structure
+docs/ • sql/ • puzzles/ • results/
 
-- A local PostgreSQL instance (recommended)  
-- The course-hosted PostgreSQL environment  
+## ▶ How to Run
+From psql:
+\i sql/01_keyvalue_trigger.sql
+\i sql/03_bigtext_generate.sql
 
-**Example (local):**
-```bash
-createdb pg_project4
-psql pg_project4
+## 🧠 Data Engineering Value
+Automation, analytics, and security-oriented data logic using PostgreSQL.
