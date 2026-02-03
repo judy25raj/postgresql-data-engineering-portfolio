@@ -1,87 +1,29 @@
-# PostgreSQL Project 6: Loading JSON from PokéAPI (Professional Portfolio Project)
+<h1 align="center">PostgreSQL JSON & API Ingestion (PokéAPI)</h1>
 
-This project demonstrates how to:
+<p align="center">
+  API Integration • JSONB Storage • Python ETL • Semi-Structured Data
+</p>
 
-- Consume a public REST API (PokéAPI)
-- Store JSON responses directly into PostgreSQL using the `JSONB` type
-- Automate ingestion of the **first 100 Pokémon** using a Python script
-- Keep a clean, reproducible structure suitable for a GitHub portfolio
+<hr/>
 
-Assignment goal (from pg4e):
+## 🧠 Overview
+This project demonstrates how to ingest semi-structured data from a public REST API into PostgreSQL using the **JSONB** data type.
 
-> Create a table `pokeapi(id INTEGER, body JSONB)` and load the first 100 Pokémon
-> JSON documents from `https://pokeapi.co/api/v2/pokemon/1..100`.
+A Python-based ingestion pipeline fetches records from the PokéAPI and stores them as JSON documents, enabling flexible querying and analytics on nested data structures.
 
----
+## 🎯 Capabilities Demonstrated
+- REST API consumption using Python  
+- Automated ingestion of JSON into PostgreSQL  
+- Storage and querying with JSONB  
+- Parameterized SQL and secure connection handling  
 
-## 🔧 How to Run (against pg.pg4e.com or local PostgreSQL)
+## 🛠 Environment
+The project can be executed against:
 
-1. **Create the table** in PostgreSQL:
+- A local PostgreSQL instance (recommended)  
+- A course-hosted PostgreSQL database  
 
+**Local example:**
 ```bash
-psql -h pg.pg4e.com -p 5432 -U pg4e_6b74d49971 pg4e_6b74d49971
-```
-
-Then in `psql`:
-
-```sql
-\i sql/01_create_pokeapi_table.sql
-```
-
-2. **Install Python dependencies** (locally):
-
-```bash
-pip install requests psycopg2-binary python-dotenv
-```
-
-3. **Configure connection settings**
-
-Create a `.env` file (not committed) next to `src/fetch_pokeapi.py`:
-
-```env
-PGHOST=pg.pg4e.com
-PGPORT=5432
-PGDATABASE=pg4e_6b74d49971
-PGUSER=pg4e_6b74d49971
-PGPASSWORD=your_password_here
-```
-
-4. **Run the loader script**
-
-From the project root:
-
-```bash
-python src/fetch_pokeapi.py
-```
-
-The script will:
-
-- Connect to the database
-- Optionally clear existing rows in `pokeapi`
-- Fetch Pokémon `1..100` from PokéAPI
-- Insert each JSON body into the `pokeapi` table
-
-5. **Verify in SQL**
-
-```sql
-SELECT id, jsonb_pretty(body) AS pokemon
-FROM pokeapi
-ORDER BY id
-LIMIT 5;
-```
-
----
-
-## ✅ Skills Demonstrated
-
-- Python + `requests` for REST API consumption
-- PostgreSQL `JSONB` storage
-- Parameterized SQL with `psycopg2`
-- Environment-based configuration using `.env`
-- Clean logging and basic error handling
-
-You can present this as:
-
-> **“PokéAPI JSON Ingestion: Python + PostgreSQL JSONB Project”**
-
-in your resume and GitHub portfolio.
+createdb pokeapi_db
+psql pokeapi_db
