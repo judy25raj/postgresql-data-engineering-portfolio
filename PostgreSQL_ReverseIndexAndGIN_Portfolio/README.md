@@ -1,46 +1,32 @@
-# PostgreSQL Project 5: Reverse Indexes & GIN Search (Professional Portfolio Project)
+<h1 align="center">PostgreSQL Natural Language Indexing: Reverse Index & GIN Search</h1>
 
-This project demonstrates **natural-language style indexing in PostgreSQL** using:
+<p align="center">
+  Inverted Indexing • GIN Search • Full-Text Search • Performance Tuning
+</p>
 
-1. A **reverse (inverted) index** built in pure SQL (docs01 / invert01).
-2. A reverse index with **stop words** removed (docs02 / invert02).
-3. A **GIN-based text[] index** using `string_to_array(lower(doc), ' ')` for word lookups.
-4. A **GIN-based full-text search index** using `to_tsvector` / `to_tsquery`.
+<hr/>
 
-It is structured as a standalone, professional portfolio project you can publish to GitHub.
+## 🧠 Overview
+This project demonstrates how PostgreSQL can be used as a search and text analytics engine by implementing reverse (inverted) indexes and GIN-based full-text search.
 
----
+It covers both SQL-only indexing strategies and native PostgreSQL indexing mechanisms to support fast word and document lookups.
 
-## 🔧 How to Run (Course DB or Local)
+## 🎯 Capabilities Demonstrated
+- Building reverse (inverted) indexes using pure SQL  
+- Removing stop-words for cleaner search indexes  
+- Creating GIN indexes on `text[]` columns  
+- Implementing PostgreSQL full-text search with `tsvector`  
+- Validating performance using `EXPLAIN`  
 
-**Course DB:**
-
+## 🛠 Environment
 ```bash
-psql -h pg.pg4e.com -p 5432 -U pg4e_6b74d49971 pg4e_6b74d49971
+createdb pg_project5
+psql pg_project5
 ```
 
-**Local DB example:**
-
-```bash
-createdb pg4e_project5
-psql pg4e_project5
+## 📂 Project Structure
 ```
-
-Then inside `psql`, run the SQL scripts from the `sql/` directory, for example:
-
-```sql
-\i sql/01_docs01_invert01.sql
-\i sql/02_docs02_invert02_with_stopwords.sql
-\i sql/03_docs03_gin_array.sql
-\i sql/04_docs03_gin_tsvector.sql
-```
-
----
-
-## 📂 Repository Structure
-
-```text
-PostgreSQL_Project_5_ReverseIndexAndGIN_Portfolio/
+postgresql-reverseindex-gin/
 ├── README.md
 ├── docs/
 │   ├── overview.md
@@ -57,19 +43,15 @@ PostgreSQL_Project_5_ReverseIndexAndGIN_Portfolio/
     └── sample_outputs.txt
 ```
 
----
+## ▶ How to Run
+```sql
+\i sql/01_docs01_invert01.sql
+\i sql/02_docs02_invert02_with_stopwords.sql
+\i sql/03_docs03_gin_array.sql
+\i sql/04_docs03_gin_tsvector.sql
+```
 
-## ✅ Skills Demonstrated
-
-- Tokenizing text in SQL using `string_to_array`.
-- Normalizing tokens to **lowercase** for case-insensitive indexing.
-- Building an **inverted index** (word → set of docs) using SQL only.
-- Implementing **stop-word filtering** with a lookup table.
-- Creating and using **GIN indexes** on `text[]` and `tsvector`.
-- Using `EXPLAIN` to verify index usage instead of sequential scans.
-
-You can refer to this as:
-
-> **“PostgreSQL Natural Language Indexing: Reverse Index & GIN Search”**
-
-on your resume / LinkedIn / portfolio.
+## 🧠 Data Engineering Value
+- Enables natural-language search directly in PostgreSQL  
+- Reduces query latency using indexing strategies  
+- Supports scalable analytics over text-heavy datasets  
